@@ -1,0 +1,34 @@
+{
+    "meetings": [
+        [
+            "Juraj Nociar (Cabinet member)",
+            "Maroš Šefčovič (Executive Vice-President)",
+            "Adam Romanowski (Cabinet member)",
+            "Virginie Battu-henriksson (Cabinet member)",
+            "Aleksandra Baranska (Cabinet member)"
+        ],
+        [
+            "Maroš Šefčovič (Executive Vice-President)",
+            "Virginie Battu-henriksson (Cabinet member)",
+            "Juraj Nociar (Cabinet member)",
+            "Aleksandra Baranska (Cabinet member)",
+            "Adam Romanowski (Cabinet member)"
+        ],
+        [
+            "Gabriela Keckesova (Cabinet member)",
+            "Juraj Nociar (Cabinet member)",
+            "Maroš Šefčovič (Executive Vice-President)"
+        ],
+        [
+            "Maroš Šefčovič (Executive Vice-President)",
+            "Juraj Nociar (Cabinet member)",
+            "Gabriela Keckesova (Cabinet member)",
+            "Maroš Šefčovič (Vice-President)"
+        ],
+        [
+            "Gabriela Keckesova (Cabinet member)",
+            "Maroš Šefčovič (Vice-President)",
+            "Juraj Nociar (Cabinet member)"
+        ]
+    ]
+}

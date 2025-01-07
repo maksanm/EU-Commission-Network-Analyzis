@@ -1,0 +1,246 @@
+{
+    "commissioners": [
+        {
+            "name": "Jutta Urpilainen (Commissioner)",
+            "age": 44,
+            "education": [
+                "Education and Pedagogy"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Ursula von der Leyen (President)",
+            "age": 61,
+            "education": [
+                "Economics",
+                "Public Health and Medicine"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Phil Hogan (Commissioner)"
+        },
+        {
+            "name": "Margrethe Vestager (Executive Vice-President)",
+            "age": 51,
+            "education": [
+                "Economics"
+            ],
+            "political_group": "Renew"
+        },
+        {
+            "name": "Kadri Simson (Commissioner)",
+            "age": 42,
+            "education": [
+                "Humanities and Languages",
+                "Political Science"
+            ],
+            "political_group": "Renew"
+        },
+        {
+            "name": "Nicolas Schmit (Commissioner)",
+            "age": 65,
+            "education": [
+                "Political Science",
+                "International Relations"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Mariya Gabriel (Commissioner)",
+            "age": 40,
+            "education": [
+                "Humanities and Languages",
+                "International Relations"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Margaritis Schinas (Vice-President)",
+            "age": 57,
+            "education": [
+                "Law",
+                "International Relations",
+                "Public Administration and Policy"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Olivér Várhelyi (Commissioner)",
+            "age": 47,
+            "education": [
+                "Law"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Adina-Ioana Vălean (Commissioner)",
+            "age": 51,
+            "education": [
+                "Mathematics",
+                "Security and Defence Studies"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Elisa Ferreira (Commissioner)",
+            "age": 64,
+            "education": [
+                "Economics"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Wopke Hoekstra (Commissioner)"
+        },
+        {
+            "name": "Valdis Dombrovskis (Executive Vice-President)",
+            "age": 48,
+            "education": [
+                "Economics",
+                "Physics"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Janez Lenarčič (Commissioner)",
+            "age": 52,
+            "education": [
+                "Law"
+            ],
+            "political_group": "Independent"
+        },
+        {
+            "name": "Helena Dalli (Commissioner)",
+            "age": 57,
+            "education": [
+                "Social Sciences"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Maroš Šefčovič (Executive Vice-President)",
+            "age": 53,
+            "education": [
+                "Law",
+                "Economics",
+                "International Relations"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Paolo Gentiloni (Commissioner)",
+            "age": 65,
+            "education": [
+                "Political Science"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Mairead McGuinness (Commissioner)",
+            "age": 61,
+            "education": [
+                "Economics"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Ylva Johansson (Commissioner)",
+            "age": 55,
+            "education": [
+                "Education and Pedagogy",
+                "Mathematics"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Iliana Ivanova (Commissioner)"
+        },
+        {
+            "name": "Frans Timmermans (Executive Vice-President)",
+            "age": 58,
+            "education": [
+                "Law",
+                "Humanities and Languages"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Maroš Šefčovič (Vice-President)",
+            "age": 53,
+            "education": [
+                "Law",
+                "Economics",
+                "International Relations"
+            ],
+            "political_group": "S&D"
+        },
+        {
+            "name": "Dubravka Šuica (Vice-President)",
+            "age": 62,
+            "education": [
+                "Humanities and Languages"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Věra Jourová (Vice-President)",
+            "age": 55,
+            "education": [
+                "Law",
+                "Humanities and Languages"
+            ],
+            "political_group": "Renew"
+        },
+        {
+            "name": "Didier Reynders (Commissioner)",
+            "age": 61,
+            "education": [
+                "Law"
+            ],
+            "political_group": "Renew"
+        },
+        {
+            "name": "Janusz Wojciechowski (Commissioner)",
+            "age": 65,
+            "education": [
+                "Law"
+            ],
+            "political_group": "ECR"
+        },
+        {
+            "name": "Johannes Hahn (Commissioner)",
+            "age": 61,
+            "education": [
+                "Humanities and Languages"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Stella Kyriakides (Commissioner)",
+            "age": 63,
+            "education": [
+                "Psychology"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Thierry Breton (Commissioner)",
+            "age": 64,
+            "education": [
+                "Engineering",
+                "Mathematics"
+            ],
+            "political_group": "EPP"
+        },
+        {
+            "name": "Virginijus Sinkevičius (Commissioner)",
+            "age": 29,
+            "education": [
+                "Economics",
+                "Social Sciences"
+            ],
+            "political_group": "Greens/EFA"
+        }
+    ]
+}
