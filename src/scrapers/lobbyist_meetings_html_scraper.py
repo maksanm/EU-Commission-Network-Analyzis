@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -7,6 +10,7 @@ from bs4 import BeautifulSoup
 from os import path
 from datetime import datetime
 import json
+import os
 
 class LobbyistMeetingsScraper:
     def __init__(self):
@@ -19,6 +23,7 @@ class LobbyistMeetingsScraper:
         self.pagination_driver = webdriver.Chrome(service=self.service, options=self.options)
         self.unique_attendees = set()
 
+        self.lobbyfacts_url = os.getenv("LOBBYFACTS_URL")
         self.comission_start = datetime(2019, 12, 1)
         self.comission_end = datetime(2024, 10, 31)
 
@@ -46,7 +51,7 @@ class LobbyistMeetingsScraper:
                 if lobbyist_name == "Name":
                     continue
                 lobbyist_href = link_tag['href']
-                lobbyist_url = f'https://lobbyfacts.eu{lobbyist_href}'
+                lobbyist_url = f'{self.lobbyfacts_url}{lobbyist_href}'
                 lobbyist_links.append((lobbyist_name, lobbyist_url))
                 continue
         return lobbyist_links
@@ -116,9 +121,9 @@ class LobbyistMeetingsScraper:
             return False
 
 
-    def scrape(self, output_path="data/meetings"):
+    def scrape(self, output_path=os.getenv("MEETINGS_PATH")):
         # Open main page with lists of lobbyists using pagination_driver
-        self.pagination_driver.get('https://lobbyfacts.eu')
+        self.pagination_driver.get(self.lobbyfacts_url)
 
         page_number = 1
         lobbyist_number = 1

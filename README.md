@@ -1,9 +1,9 @@
 ### TODO:
-- Implement cabinet members scraping (`CabinetMembersMatchScraper`)
-- Build `networkx` graph utilizing scraped data
-- Perform defined analysis
-- Move paths and URIs to `.env`
-- Documentation
+- [x] Implement cabinet members scraping (`CabinetMembersMatchScraper`) - done via scraping HTML of perplexity.ai page
+- [ ] Build `networkx` graph utilizing scraped data
+- [ ] Perform defined analysis
+- [x] Move paths and URIs to `.env`
+- [ ] Documentation
 
 ### Requirements
 

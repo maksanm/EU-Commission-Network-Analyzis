@@ -3,8 +3,8 @@ load_dotenv()
 
 import requests
 import json
-import glob
 import faiss
+import os
 from os import path
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import FAISS
@@ -16,7 +16,7 @@ from chains.commissioners_data_chain import CommissionersDataChain
 
 class CommissionersDataScraper:
     def __init__(self):
-        self.pdf_url = "https://www.cliffordchance.com/content/dam/cliffordchance/briefings/2020/10/the-european-commission-2019-2024.pdf"
+        self.pdf_url = os.getenv("COMMISSIONERS_PDF_URL")
 
         # Initialize FAISS index and embeddings
         index = faiss.IndexFlatL2()
@@ -29,7 +29,7 @@ class CommissionersDataScraper:
         )
 
         # Load unique attendees from a JSON file scrapped before
-        with open(r"data\meetings\unique_attendees.json", encoding="utf-8") as file:
+        with open(os.getenv("UNIQUE_ATTENDEES_PATH"), encoding="utf-8") as file:
             self.unique_attendees = json.load(file)["unique_attendees"]
         self.comissioners = [att for att in self.unique_attendees if "Commissioner" in att or "President" in att]
 
@@ -54,7 +54,7 @@ class CommissionersDataScraper:
         self.vectorstore.save_local(vectorstore_path)
 
 
-    def scrape(self, output_path="data/members"):
+    def scrape(self, output_path=os.getenv("MEMBERS_PATH")):
         # Download PDF if it doesn't exist locally
         pdf_path = path.join(output_path, "comissioners.pdf")
         if not path.exists(pdf_path):
