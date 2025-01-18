@@ -18,7 +18,13 @@
             "political_group": "EPP"
         },
         {
-            "name": "Phil Hogan (Commissioner)"
+            "name": "Phil Hogan (Commissioner)",
+            "age": 64,
+            "education": [
+                "Economics",
+                "Geography"
+            ],
+            "political_group": "EPP"
         },
         {
             "name": "Margrethe Vestager (Executive Vice-President)",
@@ -91,7 +97,13 @@
             "political_group": "S&D"
         },
         {
-            "name": "Wopke Hoekstra (Commissioner)"
+            "name": "Wopke Hoekstra (Commissioner)",
+            "age": 49,
+            "education": [
+                "History",
+                "Law"
+            ],
+            "political_group": "CDA"
         },
         {
             "name": "Valdis Dombrovskis (Executive Vice-President)",
