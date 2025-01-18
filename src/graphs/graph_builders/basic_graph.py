@@ -4,6 +4,7 @@ from os.path import isfile, join
 import json
 from itertools import combinations
 from root_pointer import ROOT
+import matplotlib.pyplot as plt
 MEETINGS_DIR = join(ROOT, "data/meetings")
 COMMISIONERS_DATA_DIR = join(ROOT, "data/members/commisioners_data_reviewed.json")
 MATCH_DATA_DIR = join(ROOT, "data/members/cabinent_members_match.json")
@@ -88,14 +89,17 @@ def create_edges_for_meeting(file, graph: nx.Graph):
         else:
             graph.add_edge(a1, a2, weight=1)
 
+def create_all_edges(graph: nx.Graph):
+    for file in meetings_file_generator():
+        create_edges_for_meeting(file, graph)
+    graph.remove_node("UNKNOWN")
+    return graph
+
+def create_full_graph():
+    graph = create_graph_with_members()
+    return create_all_edges(graph)
+
 
 
 if __name__ == '__main__':
-    mean = 0
-    num = 0
-    graph = create_graph_with_members()
-    for file in meetings_file_generator():
-        create_edges_for_meeting(file, graph)
-    for name in graph.nodes:
-        print(name, graph.nodes[name])
-    print(graph["Adina-Ioana Vălean (Commissioner)"]["Didier Reynders (Commissioner)"])
+    print(create_full_graph())
