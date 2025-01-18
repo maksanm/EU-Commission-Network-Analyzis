@@ -97,4 +97,5 @@ if __name__ == '__main__':
     for file in meetings_file_generator():
         create_edges_for_meeting(file, graph)
     for name in graph.nodes:
-        print(graph.nodes[name])
+        print(name, graph.nodes[name])
+    print(graph["Adina-Ioana Vălean (Commissioner)"]["Didier Reynders (Commissioner)"])

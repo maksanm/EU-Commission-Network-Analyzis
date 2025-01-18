@@ -166,7 +166,12 @@
             "political_group": "S&D"
         },
         {
-            "name": "Iliana Ivanova (Commissioner)"
+            "name": "Iliana Ivanova (Commissioner)",
+            "age": 49,
+            "education": [
+                "Economics"
+            ],
+            "political_group": "EPP"
         },
         {
             "name": "Frans Timmermans (Executive Vice-President)",
