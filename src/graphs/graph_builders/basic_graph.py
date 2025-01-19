@@ -74,6 +74,8 @@ def extract_all_unique_members(file):
             except KeyError:
                 if attendee.split("(")[1].replace(")", "") in UNREALTED_TITLES:
                     pass
+                elif "Joseph Vella" in attendee or "Fiona Knab-Lunny" in attendee:
+                    pass
                 else:
                     print(f"missing {attendee}")
     return result
