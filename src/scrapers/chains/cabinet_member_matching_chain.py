@@ -44,11 +44,11 @@ Based on the retrieved information above, identify and return the record of the 
     "commissioner": "Name Surname (Commissioner)"
 }}
 </RESPONSE_FORMAT>
-<UNKNOWN_FORMAT>
+<UNKNOWN-FORMAT>
 {{
     "commissioner": "UNKNOWN"
 }}
-</UNKNOWN_FORMAT>
+</UNKNOWN-FORMAT>
 """
 
 
@@ -75,7 +75,7 @@ Based on the retrieved information above, identify and return the record of the 
             # Find the textarea element using Selenium
             input_box = self.perplexity_driver.find_element(By.TAG_NAME, 'textarea')
             # Enter the prompt
-            perplexity_prompt = f"If you know, specify which Commissioner's Cabinet {state['cabinet_member']} serves to during the 2019-2024 EU Commission. Return Cabinet and Commissioner full name"
+            perplexity_prompt = f"If you know, specify which Commissioner's Cabinet {state['cabinet_member']} serves to during the 2019-2024 EU Commission. Return Cabinet and Commissioner full name."
             input_box.send_keys(perplexity_prompt)
             # Submit the prompt by pressing Enter
             input_box.send_keys(Keys.RETURN)

@@ -2,16 +2,15 @@ import networkx as nx
 from os import listdir
 from os.path import isfile, join
 import json
+import os
 from itertools import combinations
 from root_pointer import ROOT
-import matplotlib.pyplot as plt
-MEETINGS_DIR = join(ROOT, "data/meetings")
-COMMISIONERS_DATA_DIR = join(ROOT, "data/members/commisioners_data_reviewed.json")
-MATCH_DATA_DIR = join(ROOT, "data/members/cabinent_members_match.json")
+MEETINGS_DIR = join(ROOT, os.getenv("MEETINGS_PATH"))
+COMMISIONERS_DATA_DIR = join(ROOT, os.getenv("COMMISSIONERS_DATA_PATH"))
+MATCH_DATA_DIR = join(ROOT, os.getenv("CABINET_MEMBERS_MATCH_PATH"))
 UNREALTED_TITLES = [
     "Director-General",
     "Head of Task Force",
-    "Executive Vice-President",
     "Acting Director-General",
     "High Representative",
     "Director",

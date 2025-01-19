@@ -8,8 +8,9 @@ from os import path
 from chains.cabinet_member_matching_chain import CabinetMemberMatchingChain
 
 
-# TODO: rework, tavily works awful
 class CabinetMembersMatchScraper:
+
+
     def __init__(self):
         with open(os.getenv("UNIQUE_ATTENDEES_PATH"), encoding="utf-8") as file:
             self.unique_attendees = json.load(file)["unique_attendees"]
@@ -20,8 +21,7 @@ class CabinetMembersMatchScraper:
         cabinet_members_filtered = [
             (att, name_pattern.match(att).group(1))
             for att in self.unique_attendees
-            if "Commissioner" not in att and "President" not in att and "Director" not in att and "Representative" not in att
-                and "Chair" not in att and "General" not in att and "Head" not in att and name_pattern.match(att)
+            if "Cabinet member" in att
         ]
         self.cabinet_members, self.cabinet_member_names = zip(*cabinet_members_filtered) if cabinet_members_filtered else ([], [])
 

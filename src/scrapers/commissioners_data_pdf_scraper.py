@@ -15,6 +15,7 @@ from chains.commissioners_data_chain import CommissionersDataChain
 
 
 class CommissionersDataScraper:
+
     def __init__(self):
         self.pdf_url = os.getenv("COMMISSIONERS_PDF_URL")
 

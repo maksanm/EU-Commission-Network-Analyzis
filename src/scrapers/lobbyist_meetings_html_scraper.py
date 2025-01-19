@@ -13,10 +13,11 @@ import json
 import os
 
 class LobbyistMeetingsScraper:
+
     def __init__(self):
         # Configure Selenium WebDriver using Chrome
         self.options = Options()
-        self.options.add_argument("--headless=new")
+        #self.options.add_argument("--headless=new")
         self.options.add_argument("--log-level=1")
         self.service = Service(ChromeDriverManager().install())
         self.lobbyist_driver = webdriver.Chrome(service=self.service, options=self.options)
@@ -114,7 +115,6 @@ class LobbyistMeetingsScraper:
             # Scroll to the 'next' button and click it
             self.pagination_driver.execute_script("arguments[0].scrollIntoView();", next_button)
             next_button.click()
-            page_number += 1
             return True
         else:
             print("No more pages to process.")
@@ -141,6 +141,7 @@ class LobbyistMeetingsScraper:
                 # Click the 'next' button if exists
                 if not self._next_button_click():
                     break
+                page_number += 1
             except Exception as e:
                 print(e)
                 break
