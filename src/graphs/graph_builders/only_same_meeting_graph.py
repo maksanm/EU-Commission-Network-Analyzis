@@ -57,39 +57,40 @@ def extract_all_unique_members(file):
         return None
     with open(file, "r", encoding="utf8") as f:
         data = json.load(f)["meetings"]
-    unique_attendees = set()
     for meeting in data:
+        unique_attendees = set()
         for attendee in meeting:
             unique_attendees.add(attendee)
 
-    result = set()
-    members_list = all_members_list()
-    match = members_match()
-    for attendee in unique_attendees:
-        if attendee in members_list:
-            result.add(attendee)
-        else:
-            try:
-                result.add(match[attendee])
-            except KeyError:
-                if attendee.split("(")[1].replace(")", "") in UNREALTED_TITLES:
-                    pass
-                elif "Joseph Vella" in attendee or "Fiona Knab-Lunny" in attendee:
-                    pass
-                else:
-                    print(f"missing {attendee}")
-    return result
+        result = set()
+        members_list = all_members_list()
+        match = members_match()
+        for attendee in unique_attendees:
+            if attendee in members_list:
+                result.add(attendee)
+            else:
+                try:
+                    result.add(match[attendee])
+                except KeyError:
+                    if attendee.split("(")[1].replace(")", "") in UNREALTED_TITLES:
+                        pass
+                    elif "Joseph Vella" in attendee or "Fiona Knab-Lunny" in attendee:
+                        pass
+                    else:
+                        print(f"missing {attendee}")
+        yield result
 
 def create_edges_for_meeting(file, graph: nx.Graph):
     if "__unique_attendees.json" in file:
         return None
-    attendees = extract_all_unique_members(file)
-    for combination in combinations(attendees, 2):
-        a1, a2 = combination
-        if graph.has_edge(a1, a2):
-            graph[a1][a2]["weight"] += 1
-        else:
-            graph.add_edge(a1, a2, weight=1)
+    meetings = extract_all_unique_members(file)
+    for attendees in meetings:
+        for combination in combinations(attendees, 2):
+            a1, a2 = combination
+            if graph.has_edge(a1, a2):
+                graph[a1][a2]["weight"] += 1
+            else:
+                graph.add_edge(a1, a2, weight=1)
 
 def create_all_edges(graph: nx.Graph):
     for file in meetings_file_generator():
